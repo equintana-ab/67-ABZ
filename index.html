@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>67 Teaser Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Press+Start+2P&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <section id="teaser-section">
+      <div class="teaser-container">
+        <header class="teaser-header">
+          <h1><img src="./assets/Starting-Soon-67.png" alt="Starting Soon" /></h1>
+
+          <div class="timer" role="timer" aria-label="Countdown" data-target="2026-10-06T00:00:00+08:00">
+            <div class="timer-unit" data-unit="hours">
+              <div class="timer-digits"><span class="digit">9</span><span class="digit">9</span></div>
+              <span class="timer-label">Hours</span>
+            </div>
+            <div class="timer-unit" data-unit="mins">
+              <div class="timer-digits"><span class="digit">9</span><span class="digit">9</span></div>
+              <span class="timer-label">Minutes</span>
+            </div>
+            <div class="timer-unit" data-unit="secs">
+              <div class="timer-digits"><span class="digit">9</span><span class="digit">9</span></div>
+              <span class="timer-label">Seconds</span>
+            </div>
+          </div>
+        </header>
+
+        <div class="card-grid">
+          <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+            <symbol id="question-mark" viewBox="0 0 57 57">
+              <path
+                d="M23.5576 42.4045H30.6251V49.4719H23.5576V42.4045ZM40.0483 11.779V25.9138H37.6925V28.2696H35.3367V30.6254H30.6251V35.337H23.5576V28.2696H25.9135V25.9138H30.6251V23.558H32.9809V14.1348H23.5576V16.4906H21.2018V18.8464H16.4902V11.779H18.846V9.42319H21.2018V7.06738H35.3367V9.42319H37.6925V11.779H40.0483Z"
+                fill="#445AC8" />
+            </symbol>
+          </svg>
+          <article class="card card--rockspace">
+            <div class="card-top">
+              <span class="card-question"
+                ><svg aria-hidden="true">
+                  <use href="#question-mark"></use>
+                </svg>
+              </span>
+              <span class="card-price">₱67</span>
+            </div>
+            <div class="card-brand">
+              <img src="./assets/rockspace.png" alt="Rock Space" />
+            </div>
+          </article>
+
+          <article class="card card--sony">
+            <div class="card-top">
+              <span class="card-question"
+                ><svg aria-hidden="true">
+                  <use href="#question-mark"></use>
+                </svg>
+              </span>
+              <span class="card-price">₱670</span>
+            </div>
+            <div class="card-brand">
+              <img src="./assets/sony.png" alt="Sony" />
+            </div>
+          </article>
+
+          <article class="card card--logitech">
+            <div class="card-top">
+              <span class="card-question"
+                ><svg aria-hidden="true">
+                  <use href="#question-mark"></use>
+                </svg>
+              </span>
+              <span class="card-price">₱670</span>
+            </div>
+            <div class="card-brand">
+              <img src="./assets/logitech.png" alt="Logitech" />
+            </div>
+          </article>
+
+          <article class="card card--anker">
+            <div class="card-top">
+              <span class="card-question"
+                ><svg aria-hidden="true">
+                  <use href="#question-mark"></use>
+                </svg>
+              </span>
+              <span class="card-price">₱1,670</span>
+            </div>
+            <div class="card-brand">
+              <img src="./assets/anker.png" alt="Anker" />
+            </div>
+          </article>
+
+          <article class="card card--samsung">
+            <div class="card-top">
+              <span class="card-question"
+                ><svg aria-hidden="true">
+                  <use href="#question-mark"></use>
+                </svg>
+              </span>
+              <span class="card-price">₱1,670</span>
+            </div>
+            <div class="card-brand">
+              <img src="./assets/samsung.png" alt="Samsung" />
+            </div>
+          </article>
+
+          <article class="card card--jbl">
+            <div class="card-top">
+              <span class="card-question"
+                ><svg aria-hidden="true">
+                  <use href="#question-mark"></use>
+                </svg>
+              </span>
+              <span class="card-price">₱6,700</span>
+            </div>
+            <div class="card-brand">
+              <img src="./assets/jbl.png" alt="JBL" />
+            </div>
+          </article>
+
+          <article class="card card--dji">
+            <div class="card-top">
+              <span class="card-question"
+                ><svg aria-hidden="true">
+                  <use href="#question-mark"></use>
+                </svg>
+              </span>
+              <span class="card-price">₱16,700</span>
+            </div>
+            <div class="card-brand">
+              <img src="./assets/dji.png" alt="DJI" />
+            </div>
+          </article>
+
+          <article class="card card--garmin">
+            <div class="card-top">
+              <span class="card-question"
+                ><svg aria-hidden="true">
+                  <use href="#question-mark"></use>
+                </svg>
+              </span>
+              <span class="card-price">₱16,700</span>
+            </div>
+            <div class="card-brand">
+              <img src="./assets/garmin.png" alt="Garmin" />
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+    <script>
+      (function () {
+        "use strict";
+
+        if (window.teaserPageTimer) {
+          clearInterval(window.teaserPageTimer);
+        }
+
+        const timerEl = document.querySelector(".timer");
+        if (!timerEl) return;
+
+        const targetDate = new Date(timerEl.dataset.target);
+        if (isNaN(targetDate)) return;
+
+        const units = {
+          hours: timerEl.querySelectorAll('[data-unit="hours"] .digit'),
+          mins: timerEl.querySelectorAll('[data-unit="mins"] .digit'),
+          secs: timerEl.querySelectorAll('[data-unit="secs"] .digit'),
+        };
+
+        function setUnit(name, value) {
+          const text = String(value).padStart(2, "0");
+          units[name][0].textContent = text[0];
+          units[name][1].textContent = text[1];
+        }
+
+        function updateTimer() {
+          const distance = targetDate - Date.now();
+
+          if (distance <= 0) {
+            setUnit("hours", 0);
+            setUnit("mins", 0);
+            setUnit("secs", 0);
+            clearInterval(window.teaserPageTimer);
+            return;
+          }
+
+          const hours = Math.min(99, Math.floor(distance / (1000 * 60 * 60)));
+          const mins = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+          const secs = Math.floor((distance % (1000 * 60)) / 1000);
+
+          setUnit("hours", hours);
+          setUnit("mins", mins);
+          setUnit("secs", secs);
+        }
+
+        window.teaserPageTimer = setInterval(updateTimer, 1000);
+        updateTimer();
+      })();
+    </script>
+  </body>
+</html>

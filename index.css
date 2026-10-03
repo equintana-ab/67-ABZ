@@ -1,0 +1,322 @@
+/* Every selector is scoped under #teaser-section (specificity 1,x,x)
+   so it wins over the storefront's default styles. */
+
+#teaser-section,
+#teaser-section * {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: "Poppins", Helvetica, Arial, sans-serif;
+}
+
+/* =========================================================
+   BASE
+   ========================================================= */
+
+#teaser-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  isolation: isolate; /* keeps the -1/-2 z-index bg layers inside the section */
+}
+
+#teaser-section::before,
+#teaser-section::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+}
+
+#teaser-section::before {
+  inset: 0;
+  background: url(./assets/67-bg.png) no-repeat center center;
+  background-size: cover;
+  z-index: -2;
+}
+
+#teaser-section::after {
+  inset: 0;
+  top: -36px;
+  background: url("./assets/group-bg.png") top / cover no-repeat;
+  z-index: -1;
+  background-size: contain;
+}
+#teaser-section .teaser-container {
+  width: 100%;
+  padding: 40px 16px;
+}
+
+/* Header + timer */
+#teaser-section .teaser-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+#teaser-section .teaser-header h1 img {
+  display: block;
+  width: clamp(312px, 217.45px + 25.21vw, 520px);
+  max-width: 100%;
+  height: auto;
+}
+#teaser-section .timer {
+  display: flex;
+  gap: 12px;
+}
+
+#teaser-section .timer-unit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+#teaser-section .timer-digits {
+  display: flex;
+  border: 1.285px solid #fff;
+  box-shadow: 3px 3px 0 #38c6e8;
+  background: #341d95;
+  gap: 4px;
+  padding: 5px;
+}
+
+#teaser-section .digit {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 34px;
+  height: 50px;
+  border: 0.642px solid #6b4cec;
+  background: #4e3aa3;
+  color: #f7e333;
+  font-family: "Press Start 2P";
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 1;
+}
+
+#teaser-section .timer-label {
+  color: #fff;
+  font-family: "Press Start 2P";
+  font-size: 8px;
+  font-weight: 400;
+}
+
+/* Card grid */
+#teaser-section .card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  justify-content: center;
+}
+
+#teaser-section .card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  aspect-ratio: 286 / 401;
+  background: #fff;
+  box-shadow: 4px 4px 0 #341d95;
+  overflow: hidden;
+}
+
+#teaser-section .card-top {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  background-color: #f9f9f9;
+  background-image: url("./assets/Logo_Z_67.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: #4a5be0;
+  text-align: center;
+}
+
+#teaser-section .card-question {
+  width: 36px;
+  height: 36px;
+  aspect-ratio: 1/1;
+  animation: pulse 1.6s ease-in-out infinite;
+}
+#teaser-section .card-question svg {
+  width: 100%;
+  height: 100%;
+}
+#teaser-section .card-price {
+  font-size: 16px;
+  font-weight: 600;
+  color: #3f59d9;
+}
+
+#teaser-section .card-brand {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 33%;
+  padding: 0 10px;
+}
+
+#teaser-section .card-brand img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Brand backgrounds */
+#teaser-section .card--rockspace .card-brand {
+  background: #38c4dd;
+}
+#teaser-section .card--sony .card-brand {
+  background: #231f20;
+}
+#teaser-section .card--logitech .card-brand {
+  background: #ffffff;
+}
+#teaser-section .card--anker .card-brand {
+  background: #00a8e3;
+}
+#teaser-section .card--samsung .card-brand {
+  background: #000;
+}
+#teaser-section .card--jbl .card-brand {
+  background: #ff6600;
+}
+#teaser-section .card--dji .card-brand {
+  background: #0e0e0e;
+}
+#teaser-section .card--garmin .card-brand {
+  background: #ffffff;
+}
+
+/* =========================================================
+   TABLET: 4 columns
+   ========================================================= */
+@media (min-width: 768px) {
+  #teaser-section::after {
+    background-position: center;
+  }
+  #teaser-section .teaser-container {
+    padding: 64px 40px;
+  }
+
+  #teaser-section .teaser-header {
+    gap: 20px;
+    margin-bottom: 32px;
+  }
+
+  #teaser-section .timer {
+    gap: 20px;
+  }
+  #teaser-section .timer-unit {
+    gap: 10px;
+  }
+  #teaser-section .timer-digits {
+    box-shadow: 4px 4px 0 #38c6e8;
+    gap: 5px;
+    padding: 6px;
+  }
+  #teaser-section .digit {
+    width: 46px;
+    height: 68px;
+    font-size: 30px;
+  }
+  #teaser-section .timer-label {
+    font-size: 11px;
+  }
+
+  #teaser-section .card-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+  }
+  #teaser-section .card {
+    box-shadow: 5px 5px 0 #341d95;
+  }
+  #teaser-section .card-question {
+    width: 44px;
+    height: 44px;
+  }
+  #teaser-section .card-price {
+    font-size: 20px;
+  }
+  #teaser-section .card-brand {
+    padding: 0 12px;
+  }
+}
+
+/* =========================================================
+   DESKTOP: original design values
+   ========================================================= */
+@media (min-width: 1200px) {
+  #teaser-section .teaser-container {
+    padding: 105px;
+  }
+
+  #teaser-section .teaser-header {
+    gap: 24px;
+    margin-bottom: 40px;
+  }
+
+  #teaser-section .timer {
+    gap: 28px;
+  }
+  #teaser-section .timer-unit {
+    gap: 12.45px;
+  }
+  #teaser-section .timer-digits {
+    box-shadow: 4px 4px 0 #38c6e8;
+    gap: 6px;
+    padding: 8px;
+  }
+  #teaser-section .digit {
+    width: 58.457px;
+    height: 85.437px;
+    font-size: 38.543px;
+  }
+  #teaser-section .timer-label {
+    font-size: 13.429px;
+  }
+
+  #teaser-section .card-grid {
+    grid-template-columns: repeat(4, minmax(0, 300px));
+    gap: 20px;
+  }
+  #teaser-section .card {
+    aspect-ratio: auto;
+    height: 401.318px;
+    box-shadow: 6px 6px 0 #341d95;
+  }
+  #teaser-section .card-question {
+    width: 56.539px;
+    height: 56.539px;
+  }
+  #teaser-section .card-price {
+    font-size: 26.607px;
+  }
+  #teaser-section .card-brand {
+    padding: 0 14px;
+  }
+}
+/* Keyframes */
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 0 rgba(63, 89, 217, 0));
+  }
+  50% {
+    transform: scale(1.15);
+    filter: drop-shadow(0 0 8px rgba(63, 89, 217, 0.6));
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  #teaser-section .card-question {
+    animation: none;
+  }
+}
